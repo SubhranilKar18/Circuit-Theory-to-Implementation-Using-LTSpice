@@ -1,10 +1,10 @@
 # Circuit Theory to Implementation 🛠️
 
-A structured series of analog circuit simulations documenting my progress in bridge network analysis and DC/AC circuit theory using LTspice.
+A structured series of analog circuit simulations documenting my progress in bridge network analysis and DC/AC/transient circuit theory using LTspice.
 
 ---
 
-## 🟢 Week 01: Wheatstone Bridge DC Analysis
+## 🟢 01: Wheatstone Bridge DC Analysis
 *Objective:* To analyze bridge unbalance and verify the relationship between nodal voltage, current, and power dissipation.
 
 ### 🔍 Engineering Insights
