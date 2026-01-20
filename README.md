@@ -13,6 +13,6 @@ A structured series of analog circuit simulations documenting my progress in bri
 * *Power Curve:* Verified that power dissipation follows a quadratic relationship ($P = I^2R$), as shown by the parabolic curve in the simulation.
 
 ### 📊 Simulation Results
-![Waveforms_Wheatstone Bridge (unbalanced).jpeg](01_Wheatstone_Bridge_Analysis/waveforms.png)
+![Waveforms_Wheatstone Bridge (unbalanced)](https://github.com/SubhranilKar18/Circuit-Theory-to-Implementation-Using-LTSpice/blob/main/01_Wheatstone_Bridge(Unbalanced)_Analysis/Waveforms_Wheatstone%20Bridge%20(unbalanced).jpeg?raw=true)
 
 ---
