@@ -1,4 +1,4 @@
-# Module 03: Maximum Power Transfer Analysis
+# 03: Maximum Power Transfer Analysis
 
 ## 🎯 Objective
 To experimentally verify the Maximum Power Transfer Theorem using an unbalanced Wheatstone bridge. The goal is to determine the specific load resistance ($R_L$) that extracts the absolute maximum power from the network and compare it to the previously calculated $R_{th}$.
