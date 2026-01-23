@@ -40,4 +40,4 @@ This project utilizes specific LTspice features to ensure simulation data integr
 * **Simulation Assets:** Each module folder includes the `.asc` source files for local reproduction in LTspice.
 * **Documentation:** Verification screenshots (e.g., `.tf` reports and power curves) and `README` files with step-by-step math are provided for each circuit.
 * **Scope:** These files are intended as a reference for verifying fundamental network theorems through software simulation.
-*
+
