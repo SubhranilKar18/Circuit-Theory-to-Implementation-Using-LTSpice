@@ -7,7 +7,7 @@ To experimentally verify the Maximum Power Transfer Theorem using an unbalanced 
 According to the theorem, for a network with a Thevenin resistance $R_{th}$, maximum power is delivered to a load when:
 $$R_L = R_{th}$$
 
-From *02*, our calculated $R_{th}$ was *1045.45 $\Omega$*.
+From *02*, our calculated $R_{th}$ was **1045.45 $\Omega$**.
 The predicted maximum power is:
 $$P_{max} = \frac{V_{th}^2}{4R_{th}} = \frac{(-0.4545)^2}{4 \times 1045.45} \approx 49.38 \mu W$$
 
