@@ -46,4 +46,9 @@ The following values were obtained for the bridge ($V_1=10V, R_1=1k, R_3=1k, R_2
 | **Norton Current ($I_{no}$)** | -434.78 $\mu$A | Short-circuit current probe |
 
 ## 🖼️ Verification Gallery
+![LTspice TF Report](tf_result.jpeg)
+Figure 1: Automated extraction of Thevenin parameters using the .tf command.
+
+![Norton Current Probe](norton_current_result.jpeg)
+Figure 2: Short-circuit current measurement verifying the Norton equivalent current.
 
