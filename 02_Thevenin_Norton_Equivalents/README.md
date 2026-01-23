@@ -12,7 +12,7 @@ $$V_a = V_1 \times \frac{R_3}{R_1 + R_3} = 10 \times \frac{1000}{1000 + 1000} = 
 $$V_b = V_1 \times \frac{R_4}{R_2 + R_4} = 10 \times \frac{1200}{1000 + 1200} \approx 5.4545V$$
 
 Thus, the open-circuit differential voltage is:
-$$V_{th} = V_a - V_b = 5V - 5.4545V = -0.4545V$$
+$$V_{th} = V_A - V_B = 5V - 5.4545V = -0.4545V$$
 
 
 ### 2. Thevenin Resistance ($R_{th}$)
@@ -28,7 +28,7 @@ $$I_{no} = \frac{V_{th}}{R_{th}} = \frac{-0.4545V}{1045.45\Omega} \approx -434.7
 ## 🛠️ Simulation Methodologies
 I employed three distinct methods to ensure absolute accuracy of the results:
 
-1. **Transfer Function Analysis (`.tf`):** Used to instantly calculate the output resistance ($R_{th}$) and small-signal gain.
+1. **Transfer Function Analysis (`.tf`):** Used to instantly calculate the output resistance ($R_{th}$) and gain.
 2. **Measurement Directives (`.meas`):** Calculated the differential voltage $V(a,b)$ directly from the DC operating point.
 3. **Norton Short-Circuit Test:** Verified the Norton current by measuring the current through an ideal shorting wire placed between the terminals.
 
@@ -47,7 +47,7 @@ The following values were obtained for the bridge ($V_1=10V, R_1=1k, R_3=1k, R_2
 
 ## 🖼️ Verification Gallery
 ![LTspice TF Report](tf_result.jpeg)
-Figure 1: Automated extraction of Thevenin parameters using the .tf command.
+Figure 1: Automated extraction of Thevenin parameters using the .tf command and transfer voltage V(A,B) /V1 is -0.0454545 so , Vth = 10*(-0.0454545) as V1 = 10 V .
 
 ![Norton Current Probe](norton_current_result.jpeg)
 Figure 2: Short-circuit current measurement verifying the Norton equivalent current.
