@@ -26,11 +26,11 @@ Verification: The simulation matches the theoretical prediction with an error of
 
 ## 🖼️ Verification Gallery
 ### Power vs. Resistance Curve
-![Power Curve](power_curve_peak.jpeg)
+![Power Curve](power_curve_peak.png)
 Figure 1: The parabolic power curve showing the peak power delivery point.
 
 ### SPICE Measurement Log
-![Log Verification](log_verification.jpeg)
+![Log Verification](log_verification.png)
 Figure 2: The SPICE Error Log confirming the calculated maximum power of 49.4µW.
 
 ## 🧪 Practical Insights
