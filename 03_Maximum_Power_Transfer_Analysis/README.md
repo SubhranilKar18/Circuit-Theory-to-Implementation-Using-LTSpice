@@ -14,7 +14,7 @@ $$P_{max} = \frac{V_{th}^2}{4R_{th}} = \frac{(-0.4545)^2}{4 \times 1045.45} \app
 ## 🛠️ Simulation Methodology
 I used a automated parameter sweep to characterize the circuit's power delivery:
 * *.step param Rload 100 2k 10*: Automatically varied the load resistance from $100\Omega$ to $2k\Omega$ in $10\Omega$ increments.
-* *.meas DC max_power MAX(ABS(V(A,B)*I(RL)))*: Used a post-processing directive to scan all 191 simulation runs and identify the mathematical peak power.
+* **.meas DC max_power MAX(ABS(V(A,B)*I(RL)))*: Used a post-processing directive to scan all 191 simulation runs and identify the mathematical peak power.
 
 ## 📊 Results & Verification
 | Parameter | Theoretical Value | Simulated (LTspice) |
