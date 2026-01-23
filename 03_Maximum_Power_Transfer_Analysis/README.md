@@ -19,7 +19,7 @@ I used a automated parameter sweep to characterize the circuit's power delivery:
 ## 📊 Results & Verification
 | Parameter | Theoretical Value | Simulated (LTspice) |
 | :--- | :--- | :--- |
-| **Max Power ($P_{max}$)** | 49.38 $\mu$W | 49.407 $\mu$W |
+| **Max Power ($P_{max}$)** | 49.38 $\mu W $ | 49.407 $\mu W$ |
 | **Optimal Load ($R_L$)** | 1045.45 $\Omega$ | ~1045.45 $\Omega$ |
 
 Verification: The simulation matches the theoretical prediction with an error of less than 0.1%.
