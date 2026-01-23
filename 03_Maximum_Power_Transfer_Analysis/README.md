@@ -14,13 +14,13 @@ $$P_{max} = \frac{V_{th}^2}{4R_{th}} = \frac{(-0.4545)^2}{4 \times 1045.45} \app
 ## 🛠️ Simulation Methodology
 I used a automated parameter sweep to characterize the circuit's power delivery:
 * *.step param Rload 100 2k 10*: Automatically varied the load resistance from $100\Omega$ to $2k\Omega$ in $10\Omega$ increments.
-* **.meas DC max_power MAX(ABS(V(A,B)*I(RL)))*: Used a post-processing directive to scan all 191 simulation runs and identify the mathematical peak power.
+* **`.meas DC max_power MAX(ABS(V(A,B)*I(RL)))**: Used a post-processing directive to scan all 191 simulation runs and identify the mathematical peak power.
 
 ## 📊 Results & Verification
 | Parameter | Theoretical Value | Simulated (LTspice) |
 | :--- | :--- | :--- |
-| *Max Power ($P_{max}$)* | 49.38 $\mu$W | 49.407 $\mu$W |
-| *Optimal Load ($R_L$)* | 1045.45 $\Omega$ | ~1045.45 $\Omega$ |
+| **Max Power ($P_{max}$)** | 49.38 $\mu$W | 49.407 $\mu$W |
+| **Optimal Load ($R_L$)** | 1045.45 $\Omega$ | ~1045.45 $\Omega$ |
 
 Verification: The simulation matches the theoretical prediction with an error of less than 0.1%.
 
@@ -34,5 +34,5 @@ Figure 1: The parabolic power curve showing the peak power delivery point.
 Figure 2: The SPICE Error Log confirming the calculated maximum power of 49.4µW.
 
 ## 🧪 Practical Insights
-* *Sign Convention:* Discovered that LTspice current direction can result in negative power values ($V \times -I$). Resolved this by applying the ABS() function in the .meas directive to ensure a correct positive peak detection.
-* *Optimization:* Using .step is far more efficient than manual iteration for finding the "Sweet Spot" in an engineering design.
+* **Sign Convention:** Discovered that LTspice current direction can result in negative power values ($V \times -I$). Resolved this by applying the ABS() function in the .meas directive to ensure a correct positive peak detection.
+* **Optimization:** Using .step is far more efficient than manual iteration for finding the "Sweet Spot" in an engineering design.
