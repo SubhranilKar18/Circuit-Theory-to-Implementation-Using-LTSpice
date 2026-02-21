@@ -1,0 +1,16 @@
+# LTspice Temporary Data Files
+*.raw
+*.log
+*.fft
+*.op.raw
+
+# Schematic Backup Files
+*.bak
+*.asc#
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
+
+# Optional: Ignore PDF reports if you prefer to keep only source files
+# *.pdf
