@@ -9,7 +9,7 @@ The bridge is structured in a balanced four-arm diamond configuration:
 * **Arm 2 & 3:** Precision non-inductive resistors ($R_2$, $R_3$).
 * **Arm 4 (Unknown):** The inductor under test, modeled as an ideal inductor ($L_x$) in series with its internal resistance ($R_x$).
 
-![Maxwell Bridge Schematic](./images/Maxwell_Bridge.png)
+![Maxwell Bridge Schematic](.Maxwell_Bridge.png)
 
 ## 📐 Mathematical Derivation
 The bridge reaches balance when the complex impedances satisfy the condition $Z_1 Z_4 = Z_2 Z_3$. Separating the real and imaginary components yields the following balance equations:
@@ -27,7 +27,7 @@ $$R_x = \frac{R_2 \cdot R_3}{R_1}$$
 ## 📊 Simulation Analysis
 **Simulation Command:** `.ac dec 100 10 1Meg`
 
-![Simulation Plot](./images/Maxwell_plot.png)
+![Simulation Plot](.Maxwell_plot.png)
 
 ### Engineering Insights:
 1. **Frequency-Independent Null:** The simulation demonstrates a flat magnitude response across five decades ($10\text{ Hz}$ to $1\text{ MHz}$), confirming that the balance equations are independent of $\omega$.
