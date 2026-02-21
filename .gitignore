@@ -12,5 +12,5 @@
 .DS_Store
 Thumbs.db
 
-# Optional: Ignore PDF reports if you prefer to keep only source files
+
 # *.pdf
