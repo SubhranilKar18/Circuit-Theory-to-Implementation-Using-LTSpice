@@ -12,6 +12,7 @@ A structured series of circuit simulations documenting my progress in network an
 | **02** | Thevenin & Norton Equivalents | `.tf` Command, `.meas` Parameters | ✅ Complete |
 | **03** | Maximum Power Transfer | `.step param` Sweeps, Peak Detection | ✅ Complete |
 | **04** | Maxwell Bridge AC Analysis | `.ac` Sweep, Complex Impedance, Pole-Zero | ✅ Complete |
+| **05** | First-Order Transient Response | `.tran` Analysis, PULSE Source, RC/RL Duality | ✅ Complete |
 
 ---
 
@@ -31,18 +32,23 @@ A structured series of circuit simulations documenting my progress in network an
 * **Objective:** To measure unknown inductance ($L_x$) and internal resistance ($R_x$) using a frequency-independent AC nulling technique.
 * **Engineering Insight:** Demonstrated **Pole-Zero Cancellation** to achieve a "Zero-Order" system response at the balance point. Analysis of the Bode plot reveals the high-frequency limits of bridge balance caused by numerical precision and the underlying second-order nature of the reactive network.
 
+## 🟢 05: First-Order Transient Response (RC & RL)
+* **Objective:** To analyze the time-domain behavior of energy storage elements during switching transients.
+* **Engineering Insight:** Demonstrated the **Duality** between RC and RL networks. In RC circuits, voltage ($V_c$) cannot jump instantaneously, while in RL circuits, current ($I_L$) resists sudden changes. Verified the time constant $\tau = RC$ and $\tau = L/R$ through automated pulse edge detection.
+
+
+
 ---
 
 ## ⚙️ Technical Implementation
 This project utilizes specific LTspice features to ensure simulation data integrity and analysis efficiency:
-* **Analysis Automation:** Implemented `.step` and `.meas` directives to perform multi-point analysis without manual iteration.
-* **Frequency Domain Characterization:** Used `.ac dec` (decade sweep) to analyze bridge performance across multiple decades, ensuring the "null" remains stable across a wide spectrum.
-* **Data Normalization:** Applied the `ABS()` function within measurement blocks to handle SPICE current sign conventions and ensure consistent power reporting.
-* **Analytical Cross-Verification:** Every simulation output is benchmarked against first-principles derivations (e.g., KVL/KCL or complex impedance balancing) to validate model accuracy.
+* **Analysis Automation:** Implemented `.step` and `.meas` directives to perform multi-point analysis and automated parameter extraction.
+* **Signal Synthesis:** Configured high-fidelity **PULSE** sources to simulate ideal step-inputs, essential for accurate rise-time and settling-time measurements.
+* **Frequency & Time Domain Analysis:** Balanced the use of `.ac` for steady-state frequency response and `.tran` for dynamic switching behavior.
+* **Analytical Cross-Verification:** Every simulation output is benchmarked against first-principles (e.g., KVL/KCL, complex impedance, or differential equations) to validate model accuracy.
 
 ---
 
 ## 📂 Project Resources
 * **Simulation Assets:** Each module folder includes the `.asc` source files for local reproduction in LTspice.
-* **Documentation:** Verification screenshots (e.g., `.tf` reports, Bode plots, and power curves) and `README` files with step-by-step math are provided for each circuit.
-
+* **Documentation:** Verification screenshots (e.g., Bode plots, power curves, and transient waveforms) and `README` files with step-by-step math are provided for each circuit.
