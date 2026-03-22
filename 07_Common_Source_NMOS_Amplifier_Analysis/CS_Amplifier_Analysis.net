@@ -1,0 +1,14 @@
+* C:\Users\karsu\OneDrive\Documents\LTSpice Projects\CS_Amplifier_Analysis.asc
+V1 VDD 0 10
+Vin N001 0 SINE(0 10m 1k) AC 1
+RD VDD VD 1k
+C2 Vout VD 10µ
+M1 VD VG 0 0 NMOS l=0.18u w=5u
+C1 N001 VG 10µ
+R1 VDD VG 90k
+R2 VG 0 10k
+* .tran 10m
+.include 180nm_bulk.lib
+.ac dec 100 1 100G
+.backanno
+.end
