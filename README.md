@@ -15,6 +15,7 @@ A structured series of circuit simulations documenting my progress in network an
 | **05** | First-Order Transient Response | `.tran` Analysis, RC/RL Duality | ✅ Complete |
 | **06** | **MOSFET Characterization** | **Nested `.dc`, $g_m$ & $V_{th}$ Extraction** | ✅ Complete |
 | **07** | **Common Source Amplifier** | **AC/Transient Analysis, 180nm CMOS** | ✅ Complete |
+| **08** | **Common Drain (Source Follower)** | **Impedance Transformation, Wide Bandwidth** | ✅ Complete |
 
 ---
 
@@ -47,14 +48,20 @@ A structured series of circuit simulations documenting my progress in network an
 ## 🔵 07: Common Source (CS) Amplifier Analysis
 * **Objective:** To design and characterize a voltage gain stage using a 180nm bulk CMOS process, focusing on biasing and frequency response.
 * **Engineering Insight:** * **DC Biasing:** Implemented a **Voltage Divider Bias** network to set the Q-point in saturation, ensuring stable transconductance ($g_m \approx 2\text{--}4\text{ mS}$).
-    * **Transient Analysis:** Observed a $180^\circ$ **Phase Inversion** between input and output, verifying the inverting nature of the CS topology with a measured gain $A_v \approx 2.56\text{ V/V}$.
+    * **Transient Analysis:** Observed a 180° **Phase Inversion** between input and output, verifying the inverting nature of the CS topology with a measured gain $A_v \approx 2.56\text{ V/V}$.
     * **Frequency Response (Bode Plot):** Characterized the **Low-Frequency Roll-off** caused by coupling capacitors and the **High-Frequency Roll-off** dominated by device parasitic capacitances and the **Miller Effect**.
+
+## 🔵 08: Common Drain (CD / Source Follower) Analysis
+* **Objective:** To design and analyze a unity-voltage-gain buffer stage using a 180nm process for low output impedance applications.
+* **Engineering Insight:** * **Impedance Transformation:** Characterized the stage's capacity to function as a buffer, offering robust isolation with a non-inverting linear voltage gain of 0.82 V/V (-1.72 dB). 
+    * **The Body Effect:** Analytically isolated gain degradation down from ideal unity, tracking how the dynamic source voltage variation relative to the grounded bulk substrate shifts the threshold voltage ($V_{th}$).
+    * **Bandwidth Optimization:** Demonstrated a massive high-frequency flat-band response up to 100 MHz in the AC spectrum, resulting directly from the structural elimination of Miller capacitance multiplication.
 
 ---
 
 ## ⚙️ Technical Implementation
 * **Analysis Automation:** Implemented `.step`, `.meas`, and `.tf` directives for multi-point analysis and automated parameter extraction.
-* **Active Device Modeling:** Integrated manufacturer-specific models (Si7336ADP) and sub-micron libraries (`180nm_bulk.lib`) to account for real-world non-linearities and short-channel effects.
+* **Active Device Modeling:** Integrated manufacturer-specific models (Si7336ADP) and sub-micron libraries (`180nm_bulk.lib`) to account for real-world non-linearities, Body Effect parameters, and short-channel properties.
 * **Analytical Cross-Verification:** Every simulation output is benchmarked against first-principles (e.g., KVL/KCL, Square-Law equations, or Differential Equations) to validate model accuracy.
 
 ---
