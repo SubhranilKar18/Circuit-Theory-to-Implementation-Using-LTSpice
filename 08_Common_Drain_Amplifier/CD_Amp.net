@@ -1,0 +1,17 @@
+* C:\Users\karsu\OneDrive\Documents\LTSpice Projects\CD_Amp.asc
+M1 VDD N001 P001 N002 NMOS
+R1 P001 0 50k
+R2 N001 0 10k
+R3 VDD N001 90k
+V1 VDD 0 10
+C1 N001 Vin 1µ
+C2 Vout N002 1µ
+V2 Vin 0 SINE(0 10m 1k) AC 1
+.include 180nm_bulk.lib
+* .tran 5m
+.meas TRAN Vin_p2p PP V(Vin)
+.meas TRAN Vout_p2p PP V(Vout)
+.meas TRAN Vol_Gain PARAM  Vout_p2p/Vin_p2p
+.ac dec 100 1 100Meg
+.backanno
+.end
